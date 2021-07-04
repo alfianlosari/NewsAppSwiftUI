@@ -42,7 +42,9 @@ struct SearchTabView: View {
                 ProgressView()
             } else if !searchVM.history.isEmpty {
                 SearchHistoryListView(searchVM: searchVM) { newValue in
+                    // Need to be handled manually as it doesn't trigger default onSubmit modifier
                     searchVM.searchQuery = newValue
+                    search()                               
                 }
             } else {
                 EmptyPlaceholderView(text: "Type your query to search from NewsAPI", image: Image(systemName: "magnifyingglass"))
