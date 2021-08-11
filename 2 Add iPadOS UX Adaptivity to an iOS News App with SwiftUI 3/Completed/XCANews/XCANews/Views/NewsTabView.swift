@@ -47,12 +47,16 @@ struct NewsTabView: View {
         }
     }
     
+    @Sendable
     private func loadTask() async {
         await articleNewsVM.loadArticles()
     }
-    
+
+    @Sendable
     private func refreshTask() {
-        articleNewsVM.fetchTaskToken = FetchTaskToken(category: articleNewsVM.fetchTaskToken.category, token: Date())
+        DispatchQueue.main.async {
+            articleNewsVM.fetchTaskToken = FetchTaskToken(category: articleNewsVM.fetchTaskToken.category, token: Date())
+        }
     }
     
     @ViewBuilder

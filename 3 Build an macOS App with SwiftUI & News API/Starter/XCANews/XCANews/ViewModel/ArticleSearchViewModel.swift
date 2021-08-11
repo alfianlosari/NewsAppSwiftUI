@@ -19,6 +19,9 @@ class ArticleSearchViewModel: ObservableObject {
     private let newsAPI = NewsAPI.shared
     
     static let shared = ArticleSearchViewModel()
+    private var trimmedSearchQuery: String {
+        searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
     
     private init() {
         load()
@@ -51,7 +54,7 @@ class ArticleSearchViewModel: ObservableObject {
     func searchArticle() async {
         if Task.isCancelled { return }
         
-        let searchQuery = self.searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+        let searchQuery = trimmedSearchQuery
         phase = .empty
         
         if searchQuery.isEmpty {
@@ -61,13 +64,13 @@ class ArticleSearchViewModel: ObservableObject {
         do {
             let articles = try await newsAPI.search(for: searchQuery)
             if Task.isCancelled { return }
-            if searchQuery != self.searchQuery {
+            if searchQuery != trimmedSearchQuery {
                 return
             }
             phase = .success(articles)
         } catch {
             if Task.isCancelled { return }
-            if searchQuery != self.searchQuery {
+            if searchQuery != trimmedSearchQuery {
                 return
             }
             phase = .failure(error)
@@ -75,14 +78,14 @@ class ArticleSearchViewModel: ObservableObject {
     }
     
     private func load() {
-        async {
+        Task {
             self.history = await historyDataStore.load() ?? []
         }
     }
     
     private func historiesUpdated() {
         let history = self.history
-        async {
+        Task {
             await historyDataStore.save(history)
         }
     }

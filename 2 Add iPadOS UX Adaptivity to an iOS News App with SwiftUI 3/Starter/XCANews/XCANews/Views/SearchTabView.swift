@@ -78,7 +78,7 @@ struct SearchTabView: View {
             searchVM.addHistory(searchQuery)
         }
         
-        async {
+        Task {
             await searchVM.searchArticle()
         }
     }
