@@ -1,4 +1,4 @@
-# SwiftUI 3 News App for iOS, macOS, watchOS, tvOS App
+# SwiftUI 3 News App for iOS, macOS, watchOS, tvOS
 
 ![Alt text](./promo.jpg?raw=true "SwiftUI News App")
 
