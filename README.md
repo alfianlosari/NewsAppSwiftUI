@@ -13,6 +13,7 @@ The app has several main features:
 5. Search news based on the search query you type on the search bar.
 6. Recent search history list.
 7. Suggestion search list.
+8. Watch Connectivity and Watch Face Complication support for watchOS.
 
 ## SwiftUI 3 API:
 The SwiftUI 3 APIs used to build the app:
