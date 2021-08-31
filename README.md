@@ -1,8 +1,8 @@
-# SwiftUI NewsAPI App
+# SwiftUI NewsAPI iOS, macOS, watchOS, tvOS App
 
 ![Alt text](./promo.jpg?raw=true "SwiftUI News App")
 
-A Full News App based on the latest SwiftUI 3/iOS 15 that fetches latest news from newsapi.org.
+A Full News App based on the latest SwiftUI 3 that fetches latest news from newsapi.org targeting iOS 15, macOS 12, watchOS 8, and tvOS 15.
 
 ## Features
 The app has several main features:
