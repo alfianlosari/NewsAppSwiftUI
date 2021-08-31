@@ -35,4 +35,9 @@ The SwiftUI 3 APIs used to build the app:
 - Build and run the project using your iOS device with iOS 15 beta installed or use the simulator.
 
 ## Tutorial
-- This project is based on the YouTube tutorial that you can watch from this link https://youtu.be/LRnbFjq0bTM
+This project is based on the YouTube tutorial series that you can watch from these links:
+1. Build an iOS News App with SwiftUI 3 & NewsAPI | Full Course [YouTube](https://youtu.be/LRnbFjq0bTM).
+2. Add iPadOS UX Adaptivity to an iOS News App with SwiftUI 3 | Full Course [YouTube](https://youtu.be/AcV440Pv9a4).
+3. Build a macOS News App with SwiftUI 3 & NewsAPI | Full Course [YouTube](https://youtu.be/YSR_Hk-ivrA).
+4. Build a watchOS News App with SwiftUI 3 & NewsAPI | Full Course [YouTube](https://youtu.be/2qA-gDWbOTU).
+5. Build a tvOS News App with SwiftUI 3 & NewsAPI | Full Course [YouTube](https://youtu.be/TQG79xncC74).
