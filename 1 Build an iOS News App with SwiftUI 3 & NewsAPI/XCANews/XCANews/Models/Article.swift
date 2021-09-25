@@ -10,8 +10,11 @@ import Foundation
 fileprivate let relativeDateFormatter = RelativeDateTimeFormatter()
 
 struct Article {
-    let source: Source
     
+    // This id will be unique and auto generated from client side to avoid clashing of Identifiable in a List as NewsAPI response doesn't provide unique identifier
+    let id = UUID()
+
+    let source: Source
     let title: String
     let url: String
     let publishedAt: Date
@@ -19,6 +22,17 @@ struct Article {
     let author: String?
     let description: String?
     let urlToImage: String?
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case source
+        case title
+        case url
+        case publishedAt
+        case author
+        case description
+        case urlToImage
+    }
     
     var authorText: String {
         author ?? ""
@@ -47,10 +61,7 @@ struct Article {
 
 extension Article: Codable {}
 extension Article: Equatable {}
-extension Article: Identifiable {
-    var id: String { url }
-}
-
+extension Article: Identifiable {}
 
 extension Article {
     
