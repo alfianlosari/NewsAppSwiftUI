@@ -11,5 +11,4 @@ struct CategoryArticles: Codable {
     
     let category: Category
     let articles: [Article]
-    
 }
