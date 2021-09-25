@@ -1,4 +1,4 @@
-# SwiftUI 3 News App for iOS, macOS, watchOS, tvOS
+# SwiftUI 3.0 News App for iOS 15, iPadOS 15, macOS 12, watchOS 8, tvOS 15
 
 ![Alt text](./promo.jpg?raw=true "SwiftUI News App")
 
@@ -27,9 +27,8 @@ The SwiftUI 3 APIs used to build the app:
 ## Getting Started
 - Register for an API Key at https://newsapi.org
 - Paste the key inside NewsAPI.swift file.
-- Download Xcode 13 Beta 5 or later.
-- iOS 15 Dev Beta 5 or later.
-- macOS 12 Dev Beta 5 or later.
+- Download Xcode 13 from App Store
+- For building macOS 12 target you need to use Xcode 13 Beta 5 or upcoming Xcode 13.X release and macOS 12 Beta 7.
 
 ## Installation
 - Build and run the project using your iOS device with iOS 15 beta installed or use the simulator.
