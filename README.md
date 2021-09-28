@@ -41,4 +41,4 @@ This project is based on the YouTube tutorial series that you can watch from the
 4. Build a watchOS News App with SwiftUI 3 & NewsAPI | Full Course [YouTube](https://youtu.be/2qA-gDWbOTU).
 5. Build a tvOS News App with SwiftUI 3 & NewsAPI | Full Course [YouTube](https://youtu.be/TQG79xncC74).
 6. Data Caching with SwiftUI Task [YouTube](https://youtu.be/MQYb9S8QD4E).
-
+7. Adding Infinity Scroll Pagination in SwiftUI with Task Modifier [YouTube](https://youtu.be/mr8ARRnzxY0).
