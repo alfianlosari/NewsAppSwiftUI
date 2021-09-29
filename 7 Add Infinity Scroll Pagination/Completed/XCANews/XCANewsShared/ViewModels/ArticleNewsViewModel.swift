@@ -102,7 +102,7 @@ class ArticleNewsViewModel: ObservableObject {
             articles += nextArticles
             await cache.setValue(articles, forKey: fetchTaskToken.category.rawValue)
             
-            phase = .success(articles + nextArticles)
+            phase = .success(articles)
             
         } catch {
             print(error.localizedDescription)
