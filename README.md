@@ -14,6 +14,7 @@ The app has several main features:
 6. Recent search history list.
 7. Suggestion search list.
 8. Watch Connectivity and Watch Face Complication support for watchOS.
+9. Intent Configurable Widgets - iOS, iPadOS, macOS - S, M, L, XL Family Sizes
 
 ## SwiftUI 3 API:
 The SwiftUI 3 APIs used to build the app:
@@ -42,3 +43,4 @@ This project is based on the YouTube tutorial series that you can watch from the
 5. Build a tvOS News App with SwiftUI 3 & NewsAPI | Full Course [YouTube](https://youtu.be/TQG79xncC74).
 6. Data Caching with SwiftUI Task [YouTube](https://youtu.be/MQYb9S8QD4E).
 7. Adding Infinity Scroll Pagination in SwiftUI with Task Modifier [YouTube](https://youtu.be/mr8ARRnzxY0).
+8. 8 Add Widget to Home Screen [YouTube](https://youtu.be/gl9g9EmC6jU).
