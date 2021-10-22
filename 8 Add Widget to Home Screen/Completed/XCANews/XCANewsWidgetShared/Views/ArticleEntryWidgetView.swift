@@ -56,7 +56,7 @@ struct ArticleEntryWidgetLargeView: View {
                     .clipped()
             }
             
-            ArticleGroupView(articles: Array(articles.dropFirst().prefix(upTo: 3)))
+            ArticleGroupView(articles: Array(articles.dropFirst().prefix(3)))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                         
         }
@@ -78,7 +78,7 @@ struct ArticleEntryWidgetExtraLargeView: View {
                     .clipped()
             }
             
-            ArticleGroupView(articles: Array(articles.dropFirst().prefix(upTo: 5)))
+            ArticleGroupView(articles: Array(articles.dropFirst().prefix(5)))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                         
         }

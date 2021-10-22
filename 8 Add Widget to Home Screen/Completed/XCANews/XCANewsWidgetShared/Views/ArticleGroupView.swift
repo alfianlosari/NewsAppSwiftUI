@@ -61,13 +61,13 @@ struct ArticleGroupView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            ArticleGroupView(articles: Array(stubs.prefix(upTo: 2)))
+            ArticleGroupView(articles: Array(stubs.prefix(2)))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
             
-            ArticleGroupView(articles: Array(stubs.prefix(upTo: 4)))
+            ArticleGroupView(articles: Array(stubs.prefix(4)))
                 .previewContext(WidgetPreviewContext(family: .systemLarge))
             
-            ArticleGroupView(articles: Array(ArticleWidgetModel.placeholders.prefix(upTo: 2)))
+            ArticleGroupView(articles: Array(ArticleWidgetModel.placeholders.prefix(2)))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }
