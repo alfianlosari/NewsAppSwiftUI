@@ -37,10 +37,11 @@ class ArticleSearchViewModel: ObservableObject {
     private func observeSearchQuery() {
         $searchQuery
             .debounce(for: 1, scheduler: DispatchQueue.main)
-            .sink { _ in
+            .sink { query in
                 Task { [weak self] in
                     guard let self = self else { return }
-                    await self.searchArticle()
+                    // we need to pass the query as publishing occur in willSet block so the Published property query has not reflecting the latest value.
+                    await self.searchArticle(query: query)
                 }
             }
             .store(in: &cancellables)
@@ -70,10 +71,10 @@ class ArticleSearchViewModel: ObservableObject {
         historiesUpdated()
     }
     
-    func searchArticle() async {
+    func searchArticle(query: String? = nil) async {
         if Task.isCancelled { return }
         
-        let searchQuery = trimmedSearchQuery
+        let searchQuery = query != nil ? query!.trimmingCharacters(in: .whitespacesAndNewlines) :  trimmedSearchQuery
         phase = .empty
         
         if searchQuery.isEmpty {
